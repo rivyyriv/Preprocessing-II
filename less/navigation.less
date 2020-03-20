@@ -1,1 +1,39 @@
 // Navigation Styles here
+.navAlign() {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    align-items: center;
+    padding: 2% 0;
+    justify-content: space-around;
+    margin: 0 auto;
+    border-bottom: 2px dashed lightgray;
+}
+
+nav {
+    .navAlign();
+
+    .links {
+        display: flex;
+        justify-content: space-between;
+        font-size: 1.7rem;
+        width: 35%;
+
+        a {
+            text-decoration: none;
+            color: black;
+        }
+
+        @media @mobile {
+            flex-wrap: nowrap;
+            width: 80%;
+            margin-top: 2%;
+        }
+    }
+
+    @media @mobile {
+        flex-direction: column;
+        width: 100%;
+    }
+
+}
